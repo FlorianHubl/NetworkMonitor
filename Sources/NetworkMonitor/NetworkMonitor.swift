@@ -28,7 +28,7 @@ public class NetworkMonitor: ObservableObject {
         }
     }
     
-    init() {
+    public init() {
         monitor.pathUpdateHandler = { path in
             Task { @MainActor in
                 self.connectedToNetwork = path.status == .satisfied
